@@ -45,7 +45,7 @@ class NumPyEncoder(WeldObjectEncoder):
         """
         # Hack: Ideally, don't do os.path.dirname(__file__).
         self.utils = ctypes.PyDLL(to_shared_lib(
-            os.path.join(os.path.dirname(__file__),
+            os.path.join(os.environ["WELD_HOME"] + "/python/grizzly/",
                          "numpy_weld_convertor")))
 
     def pyToWeldType(self, obj):
@@ -134,7 +134,7 @@ class NumPyDecoder(WeldObjectDecoder):
         """
         # Hack: Ideally, don't do os.path.dirname(__file__).
         self.utils = ctypes.PyDLL(to_shared_lib(
-            os.path.join(os.path.dirname(__file__),
+            os.path.join(os.environ["WELD_HOME"] + "/python/grizzly",
                          "numpy_weld_convertor")))
 
     def decode(self, obj, restype):

@@ -8,9 +8,9 @@ Build and run tests for Weld (the instructions for this are in the main `README.
 
 ### Setup
 
-To setup Weld's Python API, add the following to the `PYTHONPATH`:
+To install Weld's Python API and Grizzly, run:
 ```bash
-$ export PYTHONPATH=$PYTHONPATH:/path/to/python  # by default, $WELD_HOME/python
+$ python setup.py install
 ```
 
 Also, make sure that `libweld` and `libweldrt` are on  the `LD_LIBRARY_PATH`.
